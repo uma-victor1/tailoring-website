@@ -8,7 +8,7 @@
   width: 100%;
 }
 header {
-  background-color: #f8f8f8;
+  background-color:#1f2833;
   padding: 1em;
 }
 /********hamburger menu******/
@@ -48,7 +48,7 @@ nav {
 }
 h1 {
   font-family: "Lora", serif;
-  color: #143774;
+  color: #66fcf1;
   font-size: 3rem;
   font-weight: 500;
 }
@@ -78,9 +78,10 @@ carousel section
 
 /* Slideshow container */
 .slideshow-container {
-  width: 90%;
+  width: 100%;
   position: relative;
-  margin: 0.5em auto;
+  margin:0;
+
 }
 
 /* Caption text */
@@ -120,6 +121,52 @@ carousel section
 .active_dot {
   background-color: white;
 }
+/******services section*****/
+.resize_img{
+  width: 6em;
+  height: 6em;
+}
+.services{
+  position: relative;
+  margin:0;
+
+  background-image: url(images/coverall.jpg); 
+  background-size: cover;
+  padding: 3em;
+  display: flex;
+
+}
+.cards{
+width: 30%;
+padding: 1.5em; 
+margin-top: 1em;
+margin: 0 1em;
+border: 2px solid pink;
+text-align: center;
+background-color: white;
+border-radius: 1em;
+opacity: 0.8;
+
+}
+.resize_img, .service_h2, .para{
+  margin-bottom: 1em;
+}
+button{
+    background-color:#ff435b;
+    color: white;
+    border: none;
+    padding: 17px 28px;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.4s;
+    border-radius: .9em;
+}
+button:hover{
+    background-color: white;
+    border: 2px solid #ff435b;
+    color:#ff435b;
+}
+
 
 /* Fading animation */
 .fade {
@@ -190,7 +237,18 @@ nav a:focus {
     padding: 0.4em;
   }
   .container_flex {
+    display: block;
+  }
+  .services{
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: .2em;
+
+  }
+  .cards{
+    width: 90%;
+    margin: auto;
   }
   h1 {
     font-size: 1.9em;
