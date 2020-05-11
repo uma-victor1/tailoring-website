@@ -9,6 +9,7 @@
   max-width: 1400px;
   margin: auto;
   color: #696969;
+  font-size: 1.2em;
 }
 header {
   background-color:#1f2833;
@@ -154,6 +155,10 @@ clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   right: 3em;
 }
 /******services section*****/
+#service_description{
+  text-align: center;
+  color: #fff;
+}
 .resize_img{
   width: 6em;
   height: 6em;
@@ -229,9 +234,9 @@ button:hover{
   width: 100%;
 }/****************testimony section*******************/
 .testimonies{
-  background:linear-gradient(to right bottom, rgba(29, 161, 242, 0.4), rgba(12, 3, 36, 0.4)), url('images/coverall.jpg');
+  height: 90vh;
   width: 100%;
-  background-size: cover;
+  position: relative;
   padding:3em;
  /* background-color: #1da1f2;*/
   display: flex;
@@ -240,10 +245,30 @@ button:hover{
  /* border-top-left-radius: 1em;*/
   /*transform: skewY(-2deg) ;*/
 }
-
+.testimonies::before{
+  content: "";
+  position: absolute;
+  background-attachment: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  
+  
+  background-image: url("images/images.jpg") !important;
+}
+.testimonial_slider{
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 .testimony_itself{
-width: 32%;
-padding: 1em;
+  position: absolute;
+top: 2em;
 align-items: center;
 font-style: comic;
 display: flex;
@@ -251,7 +276,7 @@ border: 1px solid #696969;
 flex-direction: column;
 /*transform: skewY(2deg);*/
 background-color: #fff;
-border-left: .5em solid #1f2833;
+border-left: .5em solid #631b27;
 }
 .testimony_para::before{
   content: "\201D";
@@ -260,7 +285,7 @@ border-left: .5em solid #1f2833;
   padding: 0;
   text-align: center;
   font-size: 7em;
-  color: #1da1f2;
+  color: #631b27;
 }
 img.resize{
   margin-top: 3em;
@@ -269,9 +294,71 @@ img.resize{
 }
 
 p.names{
-  color: #1da1f2;
+  color: #631b27;
   font-size: 1em;
   margin-top: .5em;
+}
+/***********
+************
+ABOUT US SECTION
+*************
+*************/
+.about_us{
+  background-color: white;
+  width: 100%;
+  height: 70vh;
+  line-height: 2em;
+  
+}
+.waw_p{
+  padding: .4em;
+}
+#about_us_text{
+  text-align: center;
+  margin: 2em auto;
+  font-size: 2.5rem;
+}
+.about_us_content{
+  display: flex;
+  justify-content: space-between;
+}
+.why_choose_us_content{
+  padding: 1.5em; 
+  margin-left: 3em;
+}
+.who_are_we{
+  width: 35%;
+ padding: 1.5em;
+
+}
+.flexxbox{
+  width: 66%;
+}.modifier_margin{
+  margin-bottom: 1em;
+  font-size: 1.3em;
+}
+.delivery{
+  display: flex;
+  padding: 1em;
+  margin-top: 3em;
+}
+.svg_imge{
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+}
+.svg_div{
+  margin-right: 1.7em;
+}
+.efficient{
+  display: flex;
+  
+}
+/*****************contact us page************/
+.contact_us{
+  padding: 1em;
+  width: 100%;
+  margin-top: 3em;
 }
 
 @-webkit-keyframes fade {
@@ -362,6 +449,36 @@ nav a:focus {
     width: 80%;
     margin: 1em auto;
   }
+  .about_us_content{
+    display: flex;
+    flex-direction: column;
+    color: #545454;
+  }
+  .who_are_we{
+    width: 100%;
+    text-align: center;
+  }
+  .flexxbox{
+    display: flex;
+   flex-direction: column;
+   width: 100%;
+  }
+  .delivery{
+    display: flex;
+    flex-direction: column;
+  }
+  .why_choose_us_content{
+    margin: 0em;
+    text-align: center;
+  }
+  .svg_div{
+    margin-right: .8em;
+    margin-bottom: 2em;
+  }
+  .modifier_margin{
+    margin-bottom: .5em;
+  }
+  
 }
 @media only screen and (max-width: 300px) {
   .text {
@@ -372,4 +489,8 @@ nav a:focus {
   width: 3em;
   height: 3em;
   border-radius: 50%;
+}
+.flaticon{
+margin-top: 5em;
+  
 }
